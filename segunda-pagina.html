@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Esto le dice al navegador que es una página web -->
+<html>
+
+  <!-- HEAD: información de la página (no se ve en pantalla) -->
+  <head>
+    <meta charset="UTF-8">
+    <title>Página web de Javier</title> <!-- Nombre que sale en la pestaña -->
+  </head>
+
+  <!-- BODY: todo lo que SÍ se ve en la página -->
+  <body>
+
+    <!-- Un título grande -->
+    <h1 style="color:green;">Esta es mi segunda pagina2</h1>
+
+    </br>
+    </br>
+
+
+
+    <!-- La caja de texto (el "id" es su nombre para encontrarla) -->
+    <input type="text" id="nombre" placeholder="Dime tu nombre">
+
+    <!-- El botón llama a la función saludar() al hacer clic -->
+    <button onclick="saludar()">Saludar</button>
+
+
+   <script>
+  	function saludar() {
+
+   	 	// Buscamos la caja por su id y tomamos lo que se escribió
+    		let texto = document.getElementById("nombre").value;
+
+		if(texto == "javier" || texto == "Javier" || texto == "Antonio" || texto == "antonio"){
+
+                   alert("Ese soy yo");
+
+                 }else{
+
+                   // Mostramos el valor en una ventanita
+   		   alert("¡Hola, " + texto + " Buenos Dias");
+ 
+                 }
+
+  	}
+   </script>
+
+
+
+<a href="index.html">Vuevle a la primera pagina</a>
+
+  </body>
+</html>
