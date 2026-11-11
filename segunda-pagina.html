@@ -30,18 +30,14 @@
   	function saludar() {
 
    	 	// Buscamos la caja por su id y tomamos lo que se escribió
-    		let texto = document.getElementById("nombre").value;
+      let texto = document.getElementById("nombre").value;
 
-		if(texto == "javier" || texto == "Javier" || texto == "Antonio" || texto == "antonio"){
-
-                   alert("Ese soy yo");
-
-                 }else{
-
-                   // Mostramos el valor en una ventanita
-   		   alert("¡Hola, " + texto + " Buenos Dias");
- 
-                 }
+      if(texto == "javier" || texto == "Javier" || texto == "Antonio" || texto == "antonio"){
+        alert("Ese soy yo");
+      }else{
+        // Mostramos el valor en una ventanita
+        alert("¡Hola, " + texto + " Buenos Dias");
+      }
 
   	}
    </script>
