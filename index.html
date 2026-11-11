@@ -12,7 +12,10 @@
   <body>
 
     <!-- Un título grande -->
-    <h1 style="color:green;">¡Hola!</h1>
+    <h1 id="titulo" style="color:green;">¡Hola!</h1>
+
+    <!-- Este botón llama a la función ocultarTitulo() al hacer clic -->
+    <button onclick="ocultarTitulo()">Ocultar título</button>
 
     <!-- La caja de texto (el "id" es su nombre para encontrarla) -->
     <input type="text" id="nombre" placeholder="Escribe tu nombre">
@@ -36,8 +39,13 @@
         // Mostramos el valor en una ventanita
         alert("¡Hola, " + texto + " Buenos Dias");
       }
-	
+
   	}
+
+    function ocultarTitulo() {
+      // Buscamos el título por su id y lo escondemos
+      document.getElementById("titulo").style.display = "none";
+    }
    </script>
    
   </body>
