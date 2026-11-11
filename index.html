@@ -17,12 +17,23 @@
     <!-- Este botón llama a la función ocultarTitulo() al hacer clic -->
     <button onclick="ocultarTitulo()">Ocultar título</button>
 
+    <br>
+    <br>
+
+    <!-- Este botón llama a la función ocultarTitulo() al hacer clic -->
+    <button onclick="ocultarYmostrarTitulo()">Ocultar y mostrar título</button>
+
+    <br>
+    <br>
+
     <!-- La caja de texto (el "id" es su nombre para encontrarla) -->
     <input type="text" id="nombre" placeholder="Escribe tu nombre">
 
     <!-- El botón llama a la función Enviar() al hacer clic -->
     <button onclick="enviar()">Enviar</button>
 
+    <br>
+    <br>
 
    <a href="segunda-pagina.html">Ve a la segunda pagina</a>
 
@@ -46,6 +57,19 @@
       // Buscamos el título por su id y lo escondemos
       document.getElementById("titulo").style.display = "none";
     }
+
+      function ocultarYmostrarTitulo(){
+
+        let titulo = document.getElementById("titulo"); 
+
+        if(titulo.style.display == "none"){
+          titulo.style.display = "block"
+        }else{
+          titulo.style.display = "none"
+        }
+         
+      }
+
    </script>
    
   </body>
