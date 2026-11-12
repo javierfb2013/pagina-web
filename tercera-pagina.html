@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!-- Esto le dice al navegador que es una página web -->
 <html>
 
@@ -12,12 +12,22 @@
   <body>
 
     <!-- Un título grande -->
-    <h1 style="color:green;">Esta es mi segunda pagina3</h1>
+    <h1 style="color:green;">Esta es mi tercera pagina</h1>
 
     </br>
     </br>
 
+    <!-- Una imagen: "src" dice de dónde sale la foto, "alt" la describe por si no carga -->
+    <!-- Le ponemos id="foto" para poder encontrarla desde JavaScript -->
+    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400">
 
+    </br>
+
+    <!-- Este botón llama a la función cambiarFoto() al hacer clic -->
+    <button onclick="cambiarFoto()">Cambiar foto</button>
+
+    </br>
+    </br>
 
     <!-- La caja de texto (el "id" es su nombre para encontrarla) -->
     <input type="text" id="nombre" placeholder="Dime tu nombre">
@@ -40,6 +50,20 @@
       }
 
   	}
+
+    function cambiarFoto() {
+
+      // Buscamos la foto por su id
+      let foto = document.getElementById("foto");
+
+      // Si está la primera foto, ponemos la segunda. Si no, volvemos a la primera
+      if(foto.getAttribute("src") == "foto.jpg"){
+        foto.src = "foto2.jpg";
+      }else{
+        foto.src = "foto.jpg";
+      }
+
+    }
    </script>
 
 
