@@ -5,17 +5,21 @@
   <!-- HEAD: información de la página (no se ve en pantalla) -->
   <head>
     <meta charset="UTF-8">
+    <!-- Esto hace que la página se vea bien en el teléfono -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página web de Javier</title> <!-- Nombre que sale en la pestaña -->
   </head>
 
   <!-- BODY: todo lo que SÍ se ve en la página -->
-  <body>
+  <body style="text-align:center;">
 
+    <div style="display:flex; gap: 10px; justify-content:center; flex-wrap:wrap; background-color:#121212; padding:10px;">
       <!-- Links de paginas-->
-    <a href="index.html">Home</a>
-    <a href="segunda-pagina.html">Segunda pagina</a>
-    <a style="color:red;" href="tercera-pagina.html">Tercera pagina</a>
-    <a href="cuarta-pagina.html">Cuarta pagina</a>
+      <a style="color:white;" href="index.html">Home</a>
+      <a style="color:white;" href="segunda-pagina.html">Segunda pagina</a>
+      <a style="color:red;" href="tercera-pagina.html">Tercera pagina</a>
+      <a style="color:white;" href="cuarta-pagina.html">Cuarta pagina</a>
+    </div>
 
 
     <!-- Un título grande -->
@@ -26,7 +30,7 @@
 
     <!-- Una imagen: "src" dice de dónde sale la foto, "alt" la describe por si no carga -->
     <!-- Le ponemos id="foto" para poder encontrarla desde JavaScript -->
-    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400">
+    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400" style="max-width:100%; height:auto;">
 
     </br>
 
