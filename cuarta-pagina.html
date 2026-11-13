@@ -24,10 +24,105 @@
       <a style="color:white;" href="segunda-pagina.html">Segunda pagina</a>
       <a style="color:white;" href="tercera-pagina.html">Tercera pagina</a>
       <a style="color:red;" href="cuarta-pagina.html">Cuarta pagina</a>
+      <a style="color:white;" href="tarea.html">Tarea</a>
+
+
+
+      
+
     </div>
 
     <!-- Un título grande -->
-    <h1 style="color:green;">Cuarta pagina</h1>
+    <h1 id="titulo" style="color:green;">Cuarta pagina</h1>
+
+    <!-- Botón que cambia el color del título -->
+    <button onclick="cambiarColor()">Cambiar color</button>
+
+    <!-- Botón que activa y desactiva el modo oscuro -->
+    <button onclick="modoOscuro()">Modo oscuro</button>
+
+
+
+    <!-- La caja de texto (el "id" es su nombre para encontrarla) -->
+    <input type="text" id="nombre" placeholder="Contraseña">
+
+
+
+    <!-- El botón llama a la función Enviar() al hacer clic -->
+    <button onclick="enviar()">Enviar</button>
+
+
+
+
+    <script>
+
+     function enviar() {
+
+        // Buscamos la caja por su id y tomamos lo que se escribió
+        let texto = document.getElementById("nombre").value;
+
+        if(texto == "tato123"){
+        alert("Bienvenido agente secreto");
+       }else{
+        // Mostramos el valor en una ventanita
+        alert("Contraseña Incorrecta");
+       }
+      }
+
+
+      function modoOscuro() {
+        var cuerpo = document.body;
+        // Si el fondo está negro, volvemos a blanco; si no, lo ponemos negro
+        if (cuerpo.style.backgroundColor === "black") {
+          cuerpo.style.backgroundColor = "white";
+          cuerpo.style.color = "black";
+        } else {
+          cuerpo.style.backgroundColor = "black";
+          cuerpo.style.color = "white";
+        }
+      }
+
+
+      function cambiarColor() {
+        var titulo = document.getElementById("titulo");
+        // Si está verde, lo ponemos azul; si no, vuelve a verde
+        if (titulo.style.color === "green") {
+          titulo.style.color = "blue";
+        } else {
+          titulo.style.color = "green";
+        }
+      }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+    
+                     <!--Una foto bonita uwu-->
+    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400" style="max-width:100%; height:auto;">
+
+
+
+
+    <h3>A mi me gusta la pizza, me gusta jugar videojuegos y me gusta comer y dormir.</h3>
+
+
 
 
 
