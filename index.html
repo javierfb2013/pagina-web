@@ -10,6 +10,33 @@
     <title>Home - Página web de Javier</title> <!-- Nombre que sale en la pestaña -->
     <!-- Estilos solo para teléfonos (pantallas de menos de 800px de ancho) -->
     <style>
+      /* La campanita se mueve de lado a lado para llamar la atención */
+      @keyframes sonar {
+        0%, 70%, 100% { transform: rotate(0deg); }
+        75% { transform: rotate(20deg); }
+        85% { transform: rotate(-20deg); }
+        95% { transform: rotate(10deg); }
+      }
+      .campana {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        margin-top: -0.75em;
+        font-size: 1.5em;
+        line-height: 1;
+        text-decoration: none;
+        animation: sonar 2s infinite;
+      }
+      /* El puntito rojo de "tienes algo nuevo" */
+      .punto {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+      }
       @media (max-width: 800px) {
         body { font-size: 26px; }
         input, button { font-size: 24px; padding: 10px; }
@@ -20,12 +47,15 @@
   <!-- BODY: todo lo que SÍ se ve en la página -->
   <body style="text-align:center;">
 
-    <div style="display:flex; gap: 10px; justify-content:center; flex-wrap:wrap; background-color:#121212; padding:10px;">
+    <div style="display:flex; gap: 10px; justify-content:center; flex-wrap:wrap; background-color:#121212; padding:10px 55px; position:relative;">
       <!-- Links de paginas-->
-      <a style="color:red;" href="index.html">Home</a> 
+      <a style="color:red;" href="index.html">Home</a>
       <a style="color:white;" href="segunda-pagina.html">Segunda pagina</a>
       <a style="color:white;" href="tercera-pagina.html">Tercera pagina</a>
       <a style="color:white;" href="cuarta-pagina.html">Cuarta pagina</a>
+
+      <!-- Campanita: lleva a la página de la tarea -->
+      <a class="campana" href="tarea.html" title="¡Tienes una tarea nueva!">🔔<span class="punto"></span></a>
     </div>
 
     <!-- Un título grande -->

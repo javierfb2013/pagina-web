@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- Esta página tiene la TAREA para practicar lo que ya sabes -->
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- Esto hace que la página se vea bien en el teléfono -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea - Página web de Javier</title>
+    <style>
+      .mision {
+        text-align: left;
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 15px 20px;
+        border: 3px solid green;
+        border-radius: 10px;
+        background-color: #f4fff4;
+      }
+      .extra {
+        border-color: orange;
+        background-color: #fff8ec;
+      }
+      .pista {
+        display: none; /* las pistas empiezan escondidas */
+        background-color: #121212;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      pre { margin: 0; white-space: pre-wrap; }
+      /* Estilos solo para teléfonos (pantallas de menos de 800px de ancho) */
+      @media (max-width: 800px) {
+        body { font-size: 26px; }
+        input, button { font-size: 24px; padding: 10px; }
+        .mision { margin: 15px 10px; }
+      }
+    </style>
+  </head>
+
+  <body style="text-align:center;">
+
+    <div style="display:flex; gap: 10px; justify-content:center; flex-wrap:wrap; background-color:#121212; padding:10px;">
+      <!-- Links de paginas-->
+      <a style="color:white;" href="index.html">Home</a>
+      <a style="color:white;" href="segunda-pagina.html">Segunda pagina</a>
+      <a style="color:white;" href="tercera-pagina.html">Tercera pagina</a>
+      <a style="color:white;" href="cuarta-pagina.html">Cuarta pagina</a>
+      <a style="color:red;" href="tarea.html">Tarea</a>
+    </div>
+
+    <h1 style="color:green;">Tarea: ¡Llena la Cuarta página!</h1>
+
+    <p>La <b>Cuarta pagina</b> está casi vacía. Vamos a llenarla usando todo lo que ya sabes.<br>
+       Haz las misiones en orden. Si te atascas, pulsa <b>Ver pista</b>.</p>
+
+
+    <!-- ===================== MISIÓN 1 ===================== -->
+    <div class="mision">
+      <h2>Misión 1: Un link nuevo en el menú</h2>
+      <p>Esta página (<b>tarea.html</b>) no sale en el menú de tus otras páginas.</p>
+      <ul>
+        <li>Añade un link que diga <b>Tarea</b> en el menú de las 4 páginas.</li>
+        <li>Debe ser blanco, igual que los otros links.</li>
+      </ul>
+      <button onclick="mostrarPista('pista1')">Ver pista</button>
+      <div id="pista1" class="pista">
+        <p>Busca el <code>&lt;div&gt;</code> negro de arriba en cada página. Copia una línea de link y cambia el <code>href</code> y el texto:</p>
+<pre>&lt;a style="color:white;" href="tarea.html"&gt;Tarea&lt;/a&gt;</pre>
+      </div>
+    </div>
+
+
+    <!-- ===================== MISIÓN 2 ===================== -->
+    <div class="mision">
+      <h2>Misión 2: Foto y párrafo</h2>
+      <p>En <b>cuarta-pagina.html</b>, debajo del título:</p>
+      <ul>
+        <li>Pon la foto <b>foto2.jpg</b>.</li>
+        <li>Debajo de la foto, escribe un párrafo que cuente <b>3 cosas que te gustan</b>.</li>
+      </ul>
+      <button onclick="mostrarPista('pista2')">Ver pista</button>
+      <div id="pista2" class="pista">
+        <p>Mira cómo pusiste la foto en <b>tercera-pagina.html</b>. Para un párrafo se usa la etiqueta <code>&lt;p&gt;</code>:</p>
+<pre>&lt;p&gt;Me gusta ...&lt;/p&gt;</pre>
+      </div>
+    </div>
+
+
+    <!-- ===================== MISIÓN 3 ===================== -->
+    <div class="mision">
+      <h2>Misión 3: El título cambia de color</h2>
+      <p>En la Cuarta pagina, añade un botón que diga <b>Cambiar color</b>.</p>
+      <ul>
+        <li>Si el título está <span style="color:green;"><b>verde</b></span>, al hacer clic se pone <span style="color:blue;"><b>azul</b></span>.</li>
+        <li>Si está azul, vuelve a verde.</li>
+      </ul>
+      <button onclick="mostrarPista('pista3')">Ver pista</button>
+      <div id="pista3" class="pista">
+        <p>¡Es casi igual que tu función <code>ocultarYmostrarTitulo()</code> de <b>index.html</b>!</p>
+        <p>1. Ponle un <code>id</code> al <code>&lt;h1&gt;</code> para poder encontrarlo.<br>
+           2. En vez de <code>style.display</code> usa <code>style.color</code>:</p>
+<pre>if(titulo.style.color == "green"){
+  titulo.style.color = "blue";
+}else{
+  ...
+}</pre>
+      </div>
+    </div>
+
+
+    <!-- ===================== MISIÓN 4 ===================== -->
+    <div class="mision">
+      <h2>Misión 4: La contraseña secreta</h2>
+      <p>En la Cuarta pagina, añade una caja de texto y un botón que diga <b>Entrar</b>.</p>
+      <ul>
+        <li>Si alguien escribe <b>tato123</b>, sale el mensaje: <i>"¡Bienvenido, agente secreto!"</i></li>
+        <li>Si escribe otra cosa, sale: <i>"Contraseña incorrecta"</i></li>
+      </ul>
+      <button onclick="mostrarPista('pista4')">Ver pista</button>
+      <div id="pista4" class="pista">
+        <p>Mira tu función <code>saludar()</code> de <b>segunda-pagina.html</b>. Es lo mismo, pero con otras palabras dentro del <code>if</code> y del <code>alert</code>.</p>
+        <p>Ojo: ponle a la caja un <code>id</code> nuevo, por ejemplo <code>id="clave"</code>, y usa ese mismo nombre en <code>getElementById</code>.</p>
+      </div>
+    </div>
+
+
+    <!-- ===================== MISIÓN EXTRA ===================== -->
+    <div class="mision extra">
+      <h2>⭐ Misión extra: Modo oscuro</h2>
+      <p>Añade un botón <b>Modo oscuro</b> que cambie el fondo de toda la página a negro y las letras a blanco. Si lo pulsas otra vez, vuelve a blanco.</p>
+      <button onclick="mostrarPista('pista5')">Ver pista</button>
+      <div id="pista5" class="pista">
+        <p>La página entera es el <code>body</code>. Puedes cambiarla así, sin <code>getElementById</code>:</p>
+<pre>document.body.style.backgroundColor = "black";
+document.body.style.color = "white";</pre>
+        <p>Usa un <code>if / else</code> para saber si ya está negra.</p>
+      </div>
+    </div>
+
+
+    <!-- ===================== MISIÓN FINAL ===================== -->
+    <div class="mision" style="border-color:#121212;">
+      <h2>🚀 Misión final: ¡Publica tu trabajo!</h2>
+      <p>Cuando todo funcione, guárdalo con un <b>commit</b> y súbelo a internet con un <b>push</b>.</p>
+      <ol>
+        <li>Abre la pestaña de <b>Source Control</b> en VS Code (el icono de las ramitas a la izquierda).</li>
+        <li>Verás los archivos que cambiaste. Revisa que estén todos.</li>
+        <li>Escribe un mensaje que diga lo que hiciste, por ejemplo: <i>"Tarea: cuarta pagina terminada"</i>.</li>
+        <li>Pulsa <b>Commit</b>.</li>
+        <li>Pulsa <b>Sync Changes</b> (o <b>Push</b>) para subirlo.</li>
+        <li>Espera un minuto y abre <b>tato.javierfolder.com/cuarta-pagina.html</b> en el teléfono. ¡Tu trabajo ya está en internet!</li>
+      </ol>
+      <button onclick="mostrarPista('pista6')">Ver pista</button>
+      <div id="pista6" class="pista">
+        <p>También lo puedes hacer escribiendo en la <b>terminal</b>:</p>
+<pre>git add .
+git commit -m "Tarea: cuarta pagina terminada"
+git push</pre>
+        <p><code>add</code> = elegir los archivos, <code>commit</code> = guardar una foto de tu trabajo, <code>push</code> = subirlo a internet.</p>
+      </div>
+    </div>
+
+
+    <!-- ===================== LISTA ===================== -->
+    <div class="mision">
+      <h2>✅ Mi lista</h2>
+      <p>Marca cada misión cuando funcione:</p>
+      <label><input type="checkbox"> Misión 1: link en el menú</label><br>
+      <label><input type="checkbox"> Misión 2: foto y párrafo</label><br>
+      <label><input type="checkbox"> Misión 3: cambiar color</label><br>
+      <label><input type="checkbox"> Misión 4: contraseña</label><br>
+      <label><input type="checkbox"> ⭐ Misión extra: modo oscuro</label><br>
+      <label><input type="checkbox"> 🚀 Misión final: commit y push</label><br>
+      <p>Cuando lo veas en tu teléfono, ¡enséñaselo a papá!</p>
+    </div>
+
+    <br>
+
+
+    <script>
+      // Muestra o esconde una pista.
+      // "cual" es el id de la pista que queremos (por ejemplo 'pista1')
+      function mostrarPista(cual) {
+
+        let pista = document.getElementById(cual);
+
+        if(pista.style.display == "block"){
+          pista.style.display = "none";
+        }else{
+          pista.style.display = "block";
+        }
+
+      }
+    </script>
+
+  </body>
+</html>
