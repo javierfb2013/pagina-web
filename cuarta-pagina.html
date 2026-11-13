@@ -19,16 +19,13 @@
   <body style="text-align:center;">
 
     <div style="display:flex; gap: 10px; justify-content:center; flex-wrap:wrap; background-color:#121212; padding:10px;">
+      
       <!-- Links de paginas-->
       <a style="color:white;" href="index.html">Home</a>
       <a style="color:white;" href="segunda-pagina.html">Segunda pagina</a>
       <a style="color:white;" href="tercera-pagina.html">Tercera pagina</a>
       <a style="color:red;" href="cuarta-pagina.html">Cuarta pagina</a>
       <a style="color:white;" href="tarea.html">Tarea</a>
-
-
-
-      
 
     </div>
 
@@ -52,21 +49,24 @@
     <button onclick="enviar()">Enviar</button>
 
 
-
+    <!--Una foto bonita uwu-->
+    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400" style="max-width:100%; height:auto;">
+    <h3>A mi me gusta la pizza, me gusta jugar videojuegos y me gusta comer y dormir.</h3>
 
     <script>
 
-     function enviar() {
+      function enviar() {
 
         // Buscamos la caja por su id y tomamos lo que se escribió
         let texto = document.getElementById("nombre").value;
 
         if(texto == "tato123"){
-        alert("Bienvenido agente secreto");
-       }else{
-        // Mostramos el valor en una ventanita
-        alert("Contraseña Incorrecta");
-       }
+          alert("Bienvenido agente secreto");
+        }else{
+          // Mostramos el valor en una ventanita
+          alert("Contraseña Incorrecta");
+        }
+
       }
 
 
@@ -93,37 +93,7 @@
         }
       }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
-
-
-
-
-    
-                     <!--Una foto bonita uwu-->
-    <img id="foto" src="foto.jpg" alt="Una foto bonita" width="400" style="max-width:100%; height:auto;">
-
-
-
-
-    <h3>A mi me gusta la pizza, me gusta jugar videojuegos y me gusta comer y dormir.</h3>
-
-
-
 
 
   </body>
